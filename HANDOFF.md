@@ -27,3 +27,4 @@ wrap rewrites it. Edit it by hand any time — your edits win.
 
 ## Changelog
 - Seeded by setup (before day 1).
+- 2026-10-01: plain wrap (no LLM). 3 alerts, 0 trade pings.
