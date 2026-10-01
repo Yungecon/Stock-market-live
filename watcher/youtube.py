@@ -92,13 +92,35 @@ class LiveInfo:
         return f"https://www.youtube.com/watch?v={self.video_id}"
 
 
+EXCLUDE_TITLE = re.compile(os.environ.get("WATCHER_EXCLUDE_TITLE", r"^REAL TIME\b"), re.I)
+
+
 def resolve_live(channel_live_url: str) -> LiveInfo | None:
-    """Returns the channel's current broadcast, or None when nothing is live."""
+    """Returns the channel's current broadcast, or None when nothing is live.
+    The /streams tab listing doesn't touch the player API, so it works even when the
+    player is bot-walled; the channel also runs a 24/7 "REAL TIME" stream we skip."""
     try:
-        return _resolve_live_html(channel_live_url)
+        li = _resolve_live_streams_tab(channel_live_url.rsplit("/live", 1)[0] + "/streams")
+        if li is not None:
+            return li
     except Exception as e:  # noqa: BLE001
-        log.info("html resolve failed (%s); trying yt-dlp", str(e)[:150])
+        log.info("streams-tab resolve failed (%s)", str(e)[:150])
+    try:
+        li = _resolve_live_html(channel_live_url)
+        if li is not None:
+            return li
+    except Exception as e:  # noqa: BLE001
+        log.info("html resolve failed (%s)", str(e)[:150])
     return _resolve_live_ytdlp(channel_live_url)
+
+
+def _resolve_live_streams_tab(streams_url: str) -> LiveInfo | None:
+    with yt_dlp.YoutubeDL(_ydl_opts(extract_flat=True, playlistend=8)) as ydl:
+        info = ydl.extract_info(streams_url, download=False)
+    for e in info.get("entries") or []:
+        if e.get("live_status") == "is_live" and not EXCLUDE_TITLE.search(e.get("title") or ""):
+            return LiveInfo(video_id=e["id"], title=e.get("title") or "", is_live=True, live_status="is_live", started=None)
+    return None
 
 
 def _resolve_live_html(channel_live_url: str) -> LiveInfo | None:
