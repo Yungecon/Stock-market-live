@@ -29,8 +29,16 @@ GitHub-hosted jobs cap at 6 h, so a run hands off to a fresh one after ~5h40m wh
    (Or set a `NTFY_TOPIC` secret to use your own, or `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`, or `DISCORD_WEBHOOK_URL`.)
 2. **Give it judgment:** add an `ANTHROPIC_API_KEY` repo secret (Settings → Secrets and variables → Actions).
    Without it the watcher runs on keyword rules: it still works, but it's noisier and the briefs are plain lists.
-3. If YouTube starts bot-checking the runner (`Sign in to confirm you're not a bot` in the logs), export
-   youtube.com cookies (Netscape cookies.txt format) into a `YT_COOKIES` secret.
+3. **Unlock audio.** YouTube puts a "confirm you're not a bot" wall in front of GitHub's datacenter IPs, so
+   without one of these fixes the watcher runs on **chat only** (still useful: spikes, crowd tickers, his own chat
+   posts), with no transcript. Pick one:
+   - **Cookies (5 min):** in a browser where you're signed in to YouTube (a throwaway Google account is
+     safest), install the "Get cookies.txt LOCALLY" extension, open youtube.com, export cookies, and paste
+     the whole file into a repo secret named `YT_COOKIES`. Re-export if the logs start showing the bot wall again.
+   - **Your own machine (most robust):** home internet isn't walled. Repo → Settings → Actions → Runners →
+     New self-hosted runner, follow the 3 commands on a Mac or Linux box that stays on during market hours,
+     then change `runs-on: ubuntu-latest` to `runs-on: self-hosted` in `.github/workflows/watch.yml`.
+     Needs `ffmpeg` and Python 3.11+ installed on that machine. This also makes Actions minutes free.
 
 ## Run it by hand
 
