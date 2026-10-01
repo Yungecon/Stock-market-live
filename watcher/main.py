@@ -23,7 +23,7 @@ from .chat import ChatLog, ChatStats, load_tickers
 from .config import HANDOFF, ROOT, WORK, day_dir, load
 from .daily import wrap_day
 from .transcribe import Line, Transcriber
-from .youtube import AudioPipe, ChatPoller, grab_frame, resolve_live
+from .youtube import AudioPipe, ChatPoller, grab_frame, pick_client, resolve_live
 
 log = logging.getLogger("watcher")
 REPO_URL = (
@@ -216,6 +216,13 @@ class Session:
         self.brain.spent_usd = 0.0
         if self.state["llm_usd_prev"] >= self.cfg["analysis"]["daily_budget_usd"]:
             self.brain.client = None
+        if not pick_client(self.live.url):
+            log.warning("every YouTube player client is bot-walled from this IP; audio will keep retrying "
+                        "(add a YT_COOKIES secret to fix). Chat still runs.")
+            if not self.state.get("walled_pinged"):
+                self.state["walled_pinged"] = True
+                notify.send("⚠️ Watcher can't hear the stream", "YouTube is bot-checking the runner, so there's no audio. "
+                            "Chat monitoring is still on. Fix: add a YT_COOKIES secret (see README).", priority=3, category="SYSTEM")
         self.audio.start()
         self.tx.start()
         self.chat.start()
@@ -335,9 +342,12 @@ def cmd_probe(cfg) -> int:
     if not target_url:
         print("FAIL: cannot see the channel at all")
         return 1
+    client = pick_client(target_url)
+    print("working player client:", client)
     chunks = WORK / "probe"
     pipe = AudioPipe(target_url, chunks, 15)
-    pipe.start()
+    if client:
+        pipe.start()
     got = collections.Counter()
 
     def on_chat(msgs):

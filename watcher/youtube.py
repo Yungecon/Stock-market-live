@@ -37,12 +37,46 @@ def cookiefile() -> str | None:
     return str(p)
 
 
-def _ydl_opts(**extra):
+# YouTube bot-walls datacenter IPs per player client; some clients get through when others don't.
+# PLAYER_CLIENT is set once a working client is found (see pick_client).
+PLAYER_CLIENTS = ["default", "tv", "web_safari", "mweb", "android_vr", "ios", "tv_simply", "web_embedded"]
+PLAYER_CLIENT: str | None = None
+
+
+def _ydl_opts(client: str | None = None, **extra):
     o = {"quiet": True, "no_warnings": True, "skip_download": True, "noplaylist": True}
     if cf := cookiefile():
         o["cookiefile"] = cf
+    client = client or PLAYER_CLIENT
+    if client and client != "default":
+        o["extractor_args"] = {"youtube": {"player_client": [client]}}
     o.update(extra)
     return o
+
+
+def _cli_client_args() -> list[str]:
+    args = []
+    if cf := cookiefile():
+        args += ["--cookies", cf]
+    if PLAYER_CLIENT and PLAYER_CLIENT != "default":
+        args += ["--extractor-args", f"youtube:player_client={PLAYER_CLIENT}"]
+    return args
+
+
+def pick_client(video_url: str, fmt: str = "bestaudio/best[height<=480]/best") -> str | None:
+    """Find a player client that can actually see formats for this video from this IP."""
+    global PLAYER_CLIENT
+    for c in ([PLAYER_CLIENT] if PLAYER_CLIENT else []) + PLAYER_CLIENTS:
+        try:
+            with yt_dlp.YoutubeDL(_ydl_opts(client=c, format=fmt)) as ydl:
+                info = ydl.extract_info(video_url, download=False)
+            if info.get("url"):
+                PLAYER_CLIENT = c
+                log.info("player client '%s' works", c)
+                return c
+        except Exception as e:  # noqa: BLE001
+            log.info("player client '%s' blocked: %s", c, str(e).split(":")[-1][:120].strip())
+    return None
 
 
 @dataclass
@@ -61,17 +95,44 @@ class LiveInfo:
 def resolve_live(channel_live_url: str) -> LiveInfo | None:
     """Returns the channel's current broadcast, or None when nothing is live."""
     try:
+        return _resolve_live_html(channel_live_url)
+    except Exception as e:  # noqa: BLE001
+        log.info("html resolve failed (%s); trying yt-dlp", str(e)[:150])
+    return _resolve_live_ytdlp(channel_live_url)
+
+
+def _resolve_live_html(channel_live_url: str) -> LiveInfo | None:
+    s = requests.Session()
+    s.headers.update({"User-Agent": UA, "Accept-Language": "en-US,en;q=0.9"})
+    s.cookies.set("CONSENT", "YES+1", domain=".youtube.com")
+    html = s.get(channel_live_url, timeout=20).text
+    m = re.search(r'<link rel="canonical" href="https://www\.youtube\.com/watch\?v=([\w-]{11})"', html)
+    if not m:
+        if "youtube.com/channel/" in html or "/@" in html:
+            return None  # landed on the channel page: nothing live
+        raise RuntimeError("unrecognized /live page")
+    vid = m.group(1)
+    live_now = '"isLiveNow":true' in html or '"isLive":true' in html
+    upcoming = '"isUpcoming":true' in html
+    t = re.search(r'<meta name="title" content="([^"]*)"', html)
+    title = (t.group(1) if t else "").replace("&amp;", "&").replace("&#39;", "'").replace("&quot;", '"')
+    if not live_now or upcoming:
+        return None
+    return LiveInfo(video_id=vid, title=title, is_live=True, live_status="is_live", started=None)
+
+
+def _resolve_live_ytdlp(channel_live_url: str) -> LiveInfo | None:
+    try:
         with yt_dlp.YoutubeDL(_ydl_opts()) as ydl:
             info = ydl.extract_info(channel_live_url, download=False, process=False)
-    except yt_dlp.utils.DownloadError as e:
+        if info.get("_type") == "url" and info.get("url"):  # channel/live redirect to watch page
+            with yt_dlp.YoutubeDL(_ydl_opts()) as ydl:
+                info = ydl.extract_info(info["url"], download=False, process=False)
+    except Exception as e:  # noqa: BLE001
         msg = str(e)
-        if "not currently live" in msg or "will begin" in msg or "Premieres" in msg:
-            return None
-        log.warning("resolve_live: %s", msg[:300])
+        if "not currently live" not in msg and "will begin" not in msg:
+            log.warning("resolve_live (yt-dlp): %s", msg[:300])
         return None
-    if info.get("_type") == "url" and info.get("url"):  # channel/live redirect to watch page
-        with yt_dlp.YoutubeDL(_ydl_opts()) as ydl:
-            info = ydl.extract_info(info["url"], download=False, process=False)
     status = info.get("live_status") or ("is_live" if info.get("is_live") else "none")
     li = LiveInfo(
         video_id=info["id"],
@@ -109,9 +170,10 @@ class AudioPipe:
         seq = 0
         while not self.stop.is_set():
             t_down = time.time()
-            cmd_dl = ["yt-dlp", "-q", "--no-warnings", "-f", "bestaudio/best[height<=480]/best", "-o", "-", self.video_url]
-            if cf := cookiefile():
-                cmd_dl[1:1] = ["--cookies", cf]
+            if self.restarts and self.restarts % 3 == 0:
+                pick_client(self.video_url)  # the client that worked may have been walled since
+            cmd_dl = ["yt-dlp", "-q", "--no-warnings", *_cli_client_args(), "-f", "bestaudio/best[height<=480]/best",
+                      "-o", "-", self.video_url]
             pattern = str(self.out_dir / f"r{seq:02d}_%06d.wav")
             cmd_ff = [
                 "ffmpeg", "-loglevel", "error", "-i", "pipe:0", "-vn", "-ac", "1", "-ar", "16000",
