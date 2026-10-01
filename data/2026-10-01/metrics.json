@@ -2,32 +2,32 @@
  "video_id": "N64WULKo_O0",
  "title": "ITS THE FIRST OF THE MONTH (ISM MANUFACTURING) - OCT 1 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 160.4,
- "audio_restarts": 152,
- "audio_downtime_s": 548,
+ "watched_minutes": 180.4,
+ "audio_restarts": 170,
+ "audio_downtime_s": 618,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 842,
+ "chat_messages": 992,
  "chat_errors": 0,
  "chat_peak_per_min": 23,
  "top_chat_tickers": [
   [
    "MAT",
+   9
+  ],
+  [
+   "NKE",
    8
   ],
   [
    "MU",
-   6
+   8
   ],
   [
    "BA",
-   6
-  ],
-  [
-   "NKE",
-   5
+   8
   ],
   [
    "KMB",
@@ -70,8 +70,8 @@
    2
   ],
   [
-   "SPCX",
-   1
+   "GEN",
+   2
   ]
  ],
  "llm_calls": 0,
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 159.0
+  "other": 180.0
  },
  "mode": "heuristic"
 }
