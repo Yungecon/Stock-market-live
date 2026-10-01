@@ -4,6 +4,7 @@ Chat uses the same innertube endpoint the web player's chat popout uses, set to
 "Live chat" (every message) rather than "Top chat", so volume stats are real."""
 from __future__ import annotations
 
+import collections
 import json
 import logging
 import os
@@ -166,6 +167,21 @@ def _resolve_live_ytdlp(channel_live_url: str) -> LiveInfo | None:
     return li if li.is_live else None
 
 
+def hls_from_watch_page(video_id: str) -> str | None:
+    """The watch page embeds the player response; when it isn't walled it carries the live HLS manifest."""
+    try:
+        html = requests.get(f"https://www.youtube.com/watch?v={video_id}", headers={"User-Agent": UA, "Accept-Language": "en-US"},
+                            cookies={"CONSENT": "YES+1"}, timeout=20).text
+        m = re.search(r'"hlsManifestUrl":"([^"]+)"', html)
+        if m:
+            return m.group(1).replace("\\u0026", "&")
+        st = re.search(r'"playabilityStatus":\{"status":"([A-Z_]+)"', html)
+        log.info("watch page has no HLS manifest (playability=%s)", st.group(1) if st else "?")
+    except Exception as e:  # noqa: BLE001
+        log.info("watch page fetch failed: %s", e)
+    return None
+
+
 def media_url(video_url: str, fmt: str) -> tuple[str, dict]:
     with yt_dlp.YoutubeDL(_ydl_opts(format=fmt)) as ydl:
         info = ydl.extract_info(video_url, download=False)
@@ -194,8 +210,12 @@ class AudioPipe:
             t_down = time.time()
             if self.restarts and self.restarts % 3 == 0:
                 pick_client(self.video_url)  # the client that worked may have been walled since
-            cmd_dl = ["yt-dlp", "-q", "--no-warnings", *_cli_client_args(), "-f", "bestaudio/best[height<=480]/best",
-                      "-o", "-", self.video_url]
+            hls = None if PLAYER_CLIENT else hls_from_watch_page(self.video_url.rsplit("=", 1)[-1])
+            if hls:
+                cmd_dl = ["ffmpeg", "-loglevel", "error", "-i", hls, "-vn", "-c:a", "copy", "-f", "mpegts", "pipe:1"]
+            else:
+                cmd_dl = ["yt-dlp", "-q", "--no-warnings", *_cli_client_args(), "-f", "bestaudio/best[height<=480]/best",
+                          "-o", "-", self.video_url]
             pattern = str(self.out_dir / f"r{seq:02d}_%06d.wav")
             cmd_ff = [
                 "ffmpeg", "-loglevel", "error", "-i", "pipe:0", "-vn", "-ac", "1", "-ar", "16000",
@@ -233,6 +253,7 @@ class ChatMsg:
     text: str
     role: str  # owner | moderator | member | viewer
     paid: str = ""
+    id: str = ""
 
     def to_json(self):
         return self.__dict__
@@ -282,6 +303,7 @@ def parse_actions(actions) -> list[ChatMsg]:
                     text=_runs_text(r.get("message", {}).get("runs")),
                     role=_role(r),
                     paid=r.get("purchaseAmountText", {}).get("simpleText", "") if kind.endswith("PaidMessageRenderer") else "",
+                    id=r.get("id", ""),
                 )
             )
     return msgs
@@ -310,6 +332,7 @@ class ChatPoller:
             except Exception as e:  # noqa: BLE001
                 log.warning("cookie load failed: %s", e)
         self.stop = threading.Event()
+        self.seen: collections.OrderedDict[str, None] = collections.OrderedDict()
         self.errors = 0
         self.total = 0
         self.last_ok: float | None = None
@@ -372,6 +395,16 @@ class ChatPoller:
                 self.stop.wait(min(120, 5 * self.errors))
 
     def _emit(self, msgs):
+        fresh = []
+        for m in msgs:
+            k = m.id or f"{m.author_id}|{m.ts}|{m.text}"
+            if k in self.seen:
+                continue
+            self.seen[k] = None
+            fresh.append(m)
+        while len(self.seen) > 5000:
+            self.seen.popitem(last=False)
+        msgs = fresh
         if msgs:
             self.total += len(msgs)
             self.on_msgs(msgs)

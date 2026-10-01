@@ -344,10 +344,11 @@ def cmd_probe(cfg) -> int:
         return 1
     client = pick_client(target_url)
     print("working player client:", client)
+    from .youtube import hls_from_watch_page
+    print("watch-page HLS manifest:", bool(hls_from_watch_page(target_url.rsplit("=", 1)[-1])))
     chunks = WORK / "probe"
     pipe = AudioPipe(target_url, chunks, 15)
-    if client:
-        pipe.start()
+    pipe.start()
     got = collections.Counter()
 
     def on_chat(msgs):
