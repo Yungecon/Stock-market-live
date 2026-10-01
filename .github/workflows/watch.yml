@@ -49,11 +49,15 @@ jobs:
 
       - name: Install ffmpeg + deps
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          if ! command -v ffmpeg >/dev/null; then
+            if command -v brew >/dev/null; then brew install ffmpeg; else sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null; fi
+          fi
           pip install -q -r requirements.txt
           pip install -q -U yt-dlp bgutil-ytdlp-pot-provider   # YouTube changes often; always take the newest
 
       - name: Start PO-token provider (helps yt-dlp past YouTube's bot checks)
+        if: runner.environment == 'github-hosted'
+        continue-on-error: true
         run: |
           docker run -d --name bgutil -p 4416:4416 --init brainicism/bgutil-ytdlp-pot-provider >/dev/null
           for i in $(seq 1 20); do curl -s -o /dev/null http://127.0.0.1:4416/ping && break; sleep 1; done
