@@ -1,0 +1,85 @@
+name: watch
+
+on:
+  schedule:
+    # 8:35 AM New York. GitHub cron is UTC, so one line per DST state; the script
+    # exits early on whichever one lands before 8:15 local.
+    - cron: "35 12 * * 1-5"
+    - cron: "35 13 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run | probe | wrap | test-notify"
+        default: run
+        type: choice
+        options: [run, probe, wrap, test-notify]
+      max_minutes:
+        description: "runtime budget for this job before it hands off to a fresh run"
+        default: "340"
+
+concurrency:
+  group: watcher
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 358
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC || 'sml-yung-03f916aeb1' }}
+      NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      YT_COOKIES: ${{ secrets.YT_COOKIES }}
+      WATCHER_MAX_MINUTES: ${{ inputs.max_minutes || '340' }}
+      WATCHER_AUTOCOMMIT: "1"
+      WATCHER_WORK: ${{ runner.temp }}/watcher
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install ffmpeg + deps
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install -q -r requirements.txt
+          pip install -q -U yt-dlp   # YouTube changes often; always take the newest
+
+      - name: Cache whisper models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-v1
+
+      - name: Watch
+        run: |
+          git config user.name "stock-market-live-bot"
+          git config user.email "actions@users.noreply.github.com"
+          python -m watcher ${{ inputs.mode || 'run' }}
+
+      - name: Save the day's data
+        if: always()
+        run: |
+          git add data briefs HANDOFF.md || true
+          if ! git diff --cached --quiet; then
+            git commit -q -m "watch $(TZ=America/New_York date +%F): ${{ inputs.mode || 'run' }} results"
+            for i in 1 2 3; do
+              git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && break
+              sleep 5
+            done
+          fi
+
+      - name: Hand off to a fresh run (stream still live)
+        if: hashFiles('.continue') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run watch.yml --ref main -f mode=run

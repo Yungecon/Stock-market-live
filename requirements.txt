@@ -1,0 +1,5 @@
+yt-dlp>=2026.8.19
+faster-whisper>=1.2.1
+anthropic>=1.11.0
+pydantic>=2.7
+requests>=2.32

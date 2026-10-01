@@ -1,0 +1,36 @@
+# Stock Market Live watcher — tune here, no code changes needed.
+
+[stream]
+channel = "@thestockmarket"
+timezone = "America/New_York"   # the stream's clock; all times below are in this zone
+earliest_start = "08:15"        # scheduled runs that fire before this exit (DST double-cron guard)
+give_up_if_not_live_by = "12:00"
+hard_stop = "18:30"             # stop watching and wrap the day no matter what
+offline_grace_min = 20          # stream gone this long = day is over
+self_dev_hint = "10:30"         # he usually starts the philosophy / self-development hour around here
+
+[audio]
+chunk_seconds = 30
+whisper_model = "base.en"       # auto-falls back to tiny.en if transcription lags
+max_backlog_chunks = 6
+
+[analysis]
+interval_seconds = 90           # how often the brain reads the latest transcript + chat
+context_seconds = 150           # transcript carried over from the previous window for continuity
+live_model = "claude-opus-5-5"  # per-window classifier
+live_effort = "low"
+wrap_model = "claude-opus-5-5"  # end-of-day briefs + handoff rewrite
+wrap_effort = "high"
+daily_budget_usd = 6.0          # live LLM calls stop (heuristics take over) past this
+screen_look_cooldown_min = 5
+
+[chat]
+spike_ratio = 2.5               # msgs/min vs trailing median
+spike_min_per_min = 30
+ticker_min_authors = 6          # unique people naming the same ticker within the window
+cooldown_min = 10
+
+[notify]
+min_priority = 2                # 1..5 — drop alerts below this
+max_per_day = 150
+announce_start = true           # low-priority "watching now" ping when the stream is found
