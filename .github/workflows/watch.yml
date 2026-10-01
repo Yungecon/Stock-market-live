@@ -39,7 +39,6 @@ jobs:
       YT_COOKIES: ${{ secrets.YT_COOKIES }}
       WATCHER_MAX_MINUTES: ${{ inputs.max_minutes || '340' }}
       WATCHER_AUTOCOMMIT: "1"
-      WATCHER_WORK: ${{ runner.temp }}/watcher
     steps:
       - uses: actions/checkout@v4
 
