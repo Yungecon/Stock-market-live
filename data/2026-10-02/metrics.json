@@ -2,14 +2,14 @@
  "video_id": "wFjwsYUZUug",
  "title": "NFP PAYROLLS (BOND VOLATILITY) - OCT 2 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 160.4,
- "audio_restarts": 152,
- "audio_downtime_s": 578,
+ "watched_minutes": 180.4,
+ "audio_restarts": 170,
+ "audio_downtime_s": 644,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 929,
+ "chat_messages": 947,
  "chat_errors": 0,
  "chat_peak_per_min": 73,
  "top_chat_tickers": [
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 2,
  "segments_min": {
-  "other": 153.0
+  "other": 163.5
  },
  "mode": "heuristic"
 }
