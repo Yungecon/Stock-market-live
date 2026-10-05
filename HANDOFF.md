@@ -29,3 +29,4 @@ wrap rewrites it. Edit it by hand any time — your edits win.
 - Seeded by setup (before day 1).
 - 2026-10-01: plain wrap (no LLM). 3 alerts, 0 trade pings.
 - 2026-10-02: plain wrap (no LLM). 0 alerts, 0 trade pings.
+- 2026-10-05: plain wrap (no LLM). 0 alerts, 0 trade pings.
