@@ -2,14 +2,14 @@
  "video_id": "N0pXKBsrwCI",
  "title": "Bonds VS. OIL - OCT 6 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 40.2,
- "audio_restarts": 42,
- "audio_downtime_s": 131,
+ "watched_minutes": 60.2,
+ "audio_restarts": 61,
+ "audio_downtime_s": 204,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 304,
+ "chat_messages": 357,
  "chat_errors": 0,
  "chat_peak_per_min": 15,
  "top_chat_tickers": [
@@ -19,7 +19,11 @@
   ],
   [
    "AMZN",
-   2
+   3
+  ],
+  [
+   "LIVE",
+   3
   ],
   [
    "BB",
@@ -27,10 +31,6 @@
   ],
   [
    "MU",
-   2
-  ],
-  [
-   "LIVE",
    2
   ],
   [
@@ -56,6 +56,22 @@
   [
    "ANET",
    1
+  ],
+  [
+   "SD",
+   1
+  ],
+  [
+   "COST",
+   1
+  ],
+  [
+   "PENG",
+   1
+  ],
+  [
+   "BA",
+   1
   ]
  ],
  "llm_calls": 0,
@@ -63,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 37.5
+  "other": 57.0
  },
  "mode": "heuristic"
 }
