@@ -1,0 +1,2 @@
+{"time": "16:01:03", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "58 msgs/min vs ~6 normal.", "tickers": [], "evidence": ""}
+{"time": "16:02:33", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: ggg", "tickers": [], "evidence": "[owner] @TheStockMarket: ggg"}
