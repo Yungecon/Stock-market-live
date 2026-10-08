@@ -2,16 +2,16 @@
  "video_id": "tP69U--a7hs",
  "title": "Oui Oui Wobble - OCT 8 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 60.2,
- "audio_restarts": 60,
- "audio_downtime_s": 221,
+ "watched_minutes": 80.3,
+ "audio_restarts": 78,
+ "audio_downtime_s": 292,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 522,
- "chat_errors": 0,
- "chat_peak_per_min": 34,
+ "chat_messages": 792,
+ "chat_errors": 11,
+ "chat_peak_per_min": 108,
  "top_chat_tickers": [
   [
    "NKE",
@@ -68,14 +68,18 @@
   [
    "PEP",
    1
+  ],
+  [
+   "GGG",
+   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 1,
+ "alerts_sent": 3,
  "segments_min": {
-  "other": 60.0
+  "other": 73.5
  },
  "mode": "heuristic"
 }
