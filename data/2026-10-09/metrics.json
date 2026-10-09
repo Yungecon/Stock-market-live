@@ -2,16 +2,16 @@
  "video_id": "NBFqHGwP6C4",
  "title": "France, Brazil & BANKS - OCT 9 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.1,
- "audio_restarts": 24,
- "audio_downtime_s": 73,
+ "watched_minutes": 40.2,
+ "audio_restarts": 42,
+ "audio_downtime_s": 133,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 170,
+ "chat_messages": 249,
  "chat_errors": 0,
- "chat_peak_per_min": 11,
+ "chat_peak_per_min": 17,
  "top_chat_tickers": [
   [
    "MSFT",
@@ -36,6 +36,22 @@
   [
    "USO",
    1
+  ],
+  [
+   "HIMS",
+   1
+  ],
+  [
+   "IWM",
+   1
+  ],
+  [
+   "HOUR",
+   1
+  ],
+  [
+   "ABT",
+   1
   ]
  ],
  "llm_calls": 0,
@@ -43,7 +59,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 19.5
+  "other": 39.0
  },
  "mode": "heuristic"
 }
