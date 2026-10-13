@@ -2,20 +2,48 @@
  "video_id": "bb-oHhEeklo",
  "title": "Flight To Quality - OCT 13 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
- "audio_restarts": 24,
- "audio_downtime_s": 76,
+ "watched_minutes": 40.2,
+ "audio_restarts": 42,
+ "audio_downtime_s": 140,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 127,
+ "chat_messages": 485,
  "chat_errors": 0,
- "chat_peak_per_min": 8,
+ "chat_peak_per_min": 87,
  "top_chat_tickers": [
   [
    "DJT",
+   4
+  ],
+  [
+   "MSFT",
    3
+  ],
+  [
+   "CHAD",
+   2
+  ],
+  [
+   "MU",
+   2
+  ],
+  [
+   "HQ",
+   2
+  ],
+  [
+   "HIT",
+   2
+  ],
+  [
+   "LTM",
+   2
+  ],
+  [
+   "TY",
+   2
   ],
   [
    "TLT",
@@ -30,28 +58,20 @@
    1
   ],
   [
-   "CHAD",
-   1
-  ],
-  [
-   "MU",
-   1
-  ],
-  [
    "PZZA",
    1
   ],
   [
-   "MSFT",
+   "GGG",
    1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 16.5
+  "other": 36.0
  },
  "mode": "heuristic"
 }
