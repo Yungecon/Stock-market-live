@@ -1,2 +1,4 @@
 {"time": "14:13:00", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "43 msgs/min vs ~4 normal.", "tickers": [], "evidence": ""}
 {"time": "15:25:06", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — NKE", "body": "32 msgs/min vs ~10 normal.", "tickers": [], "evidence": ""}
+{"time": "16:01:05", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: ggg", "tickers": [], "evidence": "[owner] @TheStockMarket: ggg"}
+{"time": "16:01:05", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "43 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}

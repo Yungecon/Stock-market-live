@@ -2,20 +2,20 @@
  "video_id": "CRshDfpNvTk",
  "title": "CPI (Bond Volatility) - OCT 14 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 140.3,
- "audio_restarts": 133,
- "audio_downtime_s": 560,
+ "watched_minutes": 160.4,
+ "audio_restarts": 151,
+ "audio_downtime_s": 650,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 1085,
+ "chat_messages": 1450,
  "chat_errors": 0,
- "chat_peak_per_min": 49,
+ "chat_peak_per_min": 104,
  "top_chat_tickers": [
   [
    "HD",
-   7
+   8
   ],
   [
    "GS",
@@ -35,6 +35,10 @@
   ],
   [
    "KO",
+   4
+  ],
+  [
+   "SPY",
    4
   ],
   [
@@ -58,10 +62,6 @@
    3
   ],
   [
-   "SPY",
-   3
-  ],
-  [
    "ONON",
    3
   ],
@@ -77,9 +77,9 @@
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 2,
+ "alerts_sent": 4,
  "segments_min": {
-  "other": 136.5
+  "other": 156.0
  },
  "mode": "heuristic"
 }
