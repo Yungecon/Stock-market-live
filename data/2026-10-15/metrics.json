@@ -2,20 +2,20 @@
  "video_id": "wgfWvf1oCaA",
  "title": "The Great Rotation - OCT 15 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 140.3,
- "audio_restarts": 133,
- "audio_downtime_s": 514,
+ "watched_minutes": 160.4,
+ "audio_restarts": 151,
+ "audio_downtime_s": 583,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 820,
+ "chat_messages": 1005,
  "chat_errors": 0,
  "chat_peak_per_min": 27,
  "top_chat_tickers": [
   [
    "SD",
-   6
+   7
   ],
   [
    "GOOGL",
@@ -36,6 +36,14 @@
   [
    "MCD",
    4
+  ],
+  [
+   "NRG",
+   3
+  ],
+  [
+   "INTC",
+   2
   ],
   [
    "AXTI",
@@ -64,14 +72,6 @@
   [
    "HIMS",
    2
-  ],
-  [
-   "AP",
-   2
-  ],
-  [
-   "HHS",
-   2
   ]
  ],
  "llm_calls": 0,
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 138.0
+  "other": 157.5
  },
  "mode": "heuristic"
 }
