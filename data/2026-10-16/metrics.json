@@ -2,14 +2,14 @@
  "video_id": "DHVj2XrRPYM",
  "title": "Option Expiration Shenanigans  - OCT 16 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 40.2,
- "audio_restarts": 42,
- "audio_downtime_s": 130,
+ "watched_minutes": 60.2,
+ "audio_restarts": 61,
+ "audio_downtime_s": 199,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 383,
+ "chat_messages": 549,
  "chat_errors": 0,
  "chat_peak_per_min": 27,
  "top_chat_tickers": [
@@ -19,10 +19,14 @@
   ],
   [
    "SPY",
-   4
+   5
   ],
   [
    "SI",
+   3
+  ],
+  [
+   "HELP",
    3
   ],
   [
@@ -68,10 +72,6 @@
   [
    "FORM",
    1
-  ],
-  [
-   "WTI",
-   1
   ]
  ],
  "llm_calls": 0,
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 39.0
+  "other": 60.0
  },
  "mode": "heuristic"
 }
