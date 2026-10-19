@@ -2,19 +2,23 @@
  "video_id": "1DXyZfrAuWA",
  "title": "Bounce or Bust - OCT 19 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 60.2,
- "audio_restarts": 60,
- "audio_downtime_s": 216,
+ "watched_minutes": 80.3,
+ "audio_restarts": 79,
+ "audio_downtime_s": 295,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 297,
+ "chat_messages": 698,
  "chat_errors": 0,
- "chat_peak_per_min": 11,
+ "chat_peak_per_min": 80,
  "top_chat_tickers": [
   [
    "LIVE",
+   3
+  ],
+  [
+   "ABT",
    3
   ],
   [
@@ -22,7 +26,19 @@
    2
   ],
   [
-   "ABT",
+   "PEP",
+   2
+  ],
+  [
+   "BSX",
+   2
+  ],
+  [
+   "ZTS",
+   2
+  ],
+  [
+   "LTM",
    2
   ],
   [
@@ -56,30 +72,14 @@
   [
    "ST",
    1
-  ],
-  [
-   "CRWV",
-   1
-  ],
-  [
-   "NBIS",
-   1
-  ],
-  [
-   "DJT",
-   1
-  ],
-  [
-   "EU",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 60.0
+  "other": 78.0
  },
  "mode": "heuristic"
 }
