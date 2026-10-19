@@ -2,17 +2,21 @@
  "video_id": "1DXyZfrAuWA",
  "title": "Bounce or Bust - OCT 19 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
- "audio_restarts": 24,
- "audio_downtime_s": 79,
+ "watched_minutes": 40.2,
+ "audio_restarts": 42,
+ "audio_downtime_s": 147,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 124,
+ "chat_messages": 221,
  "chat_errors": 0,
- "chat_peak_per_min": 8,
+ "chat_peak_per_min": 11,
  "top_chat_tickers": [
+  [
+   "LIVE",
+   3
+  ],
   [
    "INTC",
    2
@@ -40,6 +44,22 @@
   [
    "DELL",
    1
+  ],
+  [
+   "RAMP",
+   1
+  ],
+  [
+   "ST",
+   1
+  ],
+  [
+   "CRWV",
+   1
+  ],
+  [
+   "NBIS",
+   1
   ]
  ],
  "llm_calls": 0,
@@ -47,7 +67,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 19.5
+  "other": 39.0
  },
  "mode": "heuristic"
 }
