@@ -40,4 +40,4 @@ wrap rewrites it. Edit it by hand any time — your edits win.
 - 2026-10-15: plain wrap (no LLM). 0 alerts, 0 trade pings.
 - 2026-10-16: plain wrap (no LLM). 0 alerts, 0 trade pings.
 - 2026-10-19: plain wrap (no LLM). 0 alerts, 0 trade pings.
-- 2026-10-20: plain wrap (no LLM). 4 alerts, 0 trade pings.
+- 2026-10-20: plain wrap (no LLM). 0 alerts, 0 trade pings.
