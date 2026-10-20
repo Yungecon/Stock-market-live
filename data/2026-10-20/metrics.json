@@ -2,14 +2,14 @@
  "video_id": "F5ZGVJqzTa4",
  "title": "EARNINGS BEGIN  - OCT 20 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 60.2,
- "audio_restarts": 60,
- "audio_downtime_s": 213,
+ "watched_minutes": 80.2,
+ "audio_restarts": 78,
+ "audio_downtime_s": 273,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 425,
+ "chat_messages": 516,
  "chat_errors": 0,
  "chat_peak_per_min": 30,
  "top_chat_tickers": [
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 1,
  "segments_min": {
-  "other": 60.0
+  "other": 81.0
  },
  "mode": "heuristic"
 }
