@@ -1,3 +1,4 @@
 {"time": "13:59:01", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — BIDU", "body": "30 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}
 {"time": "15:48:15", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "30 msgs/min vs ~4 normal.", "tickers": [], "evidence": ""}
 {"time": "16:00:01", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — LIVE", "body": "87 msgs/min vs ~7 normal.", "tickers": [], "evidence": ""}
+{"time": "16:10:03", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — NFLX", "body": "35 msgs/min vs ~8 normal.", "tickers": [], "evidence": ""}
