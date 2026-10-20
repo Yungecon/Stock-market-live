@@ -2,20 +2,24 @@
  "video_id": "F5ZGVJqzTa4",
  "title": "EARNINGS BEGIN  - OCT 20 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 140.3,
+ "watched_minutes": 160.4,
  "audio_restarts": 78,
  "audio_downtime_s": 273,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 843,
+ "chat_messages": 1249,
  "chat_errors": 0,
- "chat_peak_per_min": 30,
+ "chat_peak_per_min": 143,
  "top_chat_tickers": [
   [
    "NFLX",
-   8
+   11
+  ],
+  [
+   "SPCX",
+   5
   ],
   [
    "SPY",
@@ -26,11 +30,15 @@
    3
   ],
   [
+   "CHAD",
+   3
+  ],
+  [
    "EU",
    3
   ],
   [
-   "SPCX",
+   "GGG",
    3
   ],
   [
@@ -39,6 +47,14 @@
   ],
   [
    "NKE",
+   2
+  ],
+  [
+   "ISRG",
+   2
+  ],
+  [
+   "LIVE",
    2
   ],
   [
@@ -56,30 +72,14 @@
   [
    "MSFT",
    1
-  ],
-  [
-   "CPA",
-   1
-  ],
-  [
-   "LMT",
-   1
-  ],
-  [
-   "INTC",
-   1
-  ],
-  [
-   "UWMC",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 2,
+ "alerts_sent": 3,
  "segments_min": {
-  "other": 141.0
+  "other": 160.5
  },
  "mode": "heuristic"
 }
