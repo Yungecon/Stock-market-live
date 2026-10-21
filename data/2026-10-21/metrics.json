@@ -2,20 +2,20 @@
  "video_id": "9JUEM3ifi6c",
  "title": "WEEBLE WOBBLE SMCI SPCX OIL - OCT 21 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 120.3,
+ "watched_minutes": 140.3,
  "audio_restarts": 45,
  "audio_downtime_s": 188,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 807,
+ "chat_messages": 885,
  "chat_errors": 0,
  "chat_peak_per_min": 45,
  "top_chat_tickers": [
   [
    "META",
-   11
+   12
   ],
   [
    "CMG",
@@ -23,7 +23,7 @@
   ],
   [
    "IBM",
-   3
+   4
   ],
   [
    "AMBA",
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 1,
  "segments_min": {
-  "other": 117.0
+  "other": 136.5
  },
  "mode": "heuristic"
 }
