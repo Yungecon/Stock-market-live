@@ -2,14 +2,14 @@
  "video_id": "8ztEO1qKCGY",
  "title": "EARNINGS HANGOVER - OCT 22 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 60.2,
+ "watched_minutes": 80.3,
  "audio_restarts": 36,
  "audio_downtime_s": 143,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 510,
+ "chat_messages": 679,
  "chat_errors": 0,
  "chat_peak_per_min": 38,
  "top_chat_tickers": [
@@ -18,15 +18,27 @@
    4
   ],
   [
+   "MRK",
+   3
+  ],
+  [
    "TLT",
    2
   ],
   [
-   "MRK",
+   "MRNA",
    2
   ],
   [
    "SI",
+   2
+  ],
+  [
+   "BTC",
+   2
+  ],
+  [
+   "HIMS",
    2
   ],
   [
@@ -35,10 +47,6 @@
   ],
   [
    "CRM",
-   1
-  ],
-  [
-   "MRNA",
    1
   ],
   [
@@ -64,14 +72,6 @@
   [
    "HTZ",
    1
-  ],
-  [
-   "ADBE",
-   1
-  ],
-  [
-   "BTC",
-   1
   ]
  ],
  "llm_calls": 0,
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 2,
  "segments_min": {
-  "other": 61.5
+  "other": 81.0
  },
  "mode": "heuristic"
 }
