@@ -1,2 +1,4 @@
 {"time": "14:50:04", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "35 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}
 {"time": "15:00:04", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "32 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}
+{"time": "16:01:01", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: gg", "tickers": [], "evidence": "[owner] @TheStockMarket: gg"}
+{"time": "16:01:02", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "106 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}
