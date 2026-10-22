@@ -1,0 +1,2 @@
+{"time": "14:50:04", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "35 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}
+{"time": "15:00:04", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "32 msgs/min vs ~5 normal.", "tickers": [], "evidence": ""}
