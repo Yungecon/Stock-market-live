@@ -1,1 +1,3 @@
 {"time": "14:00:11", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: chkp", "tickers": [], "evidence": "[owner] @TheStockMarket: chkp"}
+{"time": "16:01:01", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: g", "tickers": [], "evidence": "[owner] @TheStockMarket: g"}
+{"time": "16:01:02", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — GH", "body": "130 msgs/min vs ~6 normal.", "tickers": [], "evidence": ""}
