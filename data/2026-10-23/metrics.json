@@ -1,0 +1,85 @@
+{
+ "video_id": "jf8LgGqEENM",
+ "title": "Cyber vs. Credit - OCT 23 - Stock Market LIVE, Live Trading, Stock News",
+ "runs": 1,
+ "watched_minutes": 20.2,
+ "audio_restarts": 24,
+ "audio_downtime_s": 84,
+ "chunks_transcribed": 0,
+ "chunks_dropped": 0,
+ "transcribe_lag_s": 0.0,
+ "whisper_model": "base.en",
+ "chat_messages": 221,
+ "chat_errors": 0,
+ "chat_peak_per_min": 18,
+ "top_chat_tickers": [
+  [
+   "AAPL",
+   3
+  ],
+  [
+   "RH",
+   2
+  ],
+  [
+   "SOFI",
+   2
+  ],
+  [
+   "INTC",
+   2
+  ],
+  [
+   "VLO",
+   2
+  ],
+  [
+   "NET",
+   2
+  ],
+  [
+   "FORM",
+   2
+  ],
+  [
+   "SONY",
+   1
+  ],
+  [
+   "TACO",
+   1
+  ],
+  [
+   "WGS",
+   1
+  ],
+  [
+   "VRT",
+   1
+  ],
+  [
+   "GOOGL",
+   1
+  ],
+  [
+   "HR",
+   1
+  ],
+  [
+   "LVS",
+   1
+  ],
+  [
+   "PLUG",
+   1
+  ]
+ ],
+ "llm_calls": 0,
+ "llm_failures": 0,
+ "llm_usd": 0.0,
+ "alerts_sent": 0,
+ "segments_min": {
+  "other": 19.5
+ },
+ "mode": "heuristic"
+}
