@@ -2,14 +2,14 @@
  "video_id": "jf8LgGqEENM",
  "title": "Cyber vs. Credit - OCT 23 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 160.4,
- "audio_restarts": 151,
- "audio_downtime_s": 610,
+ "watched_minutes": 180.4,
+ "audio_restarts": 169,
+ "audio_downtime_s": 676,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 1255,
+ "chat_messages": 1297,
  "chat_errors": 0,
  "chat_peak_per_min": 167,
  "top_chat_tickers": [
@@ -30,6 +30,10 @@
    3
   ],
   [
+   "HR",
+   3
+  ],
+  [
    "GGG",
    3
   ],
@@ -43,10 +47,6 @@
   ],
   [
    "VLO",
-   2
-  ],
-  [
-   "HR",
    2
   ],
   [
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 3,
  "segments_min": {
-  "other": 159.0
+  "other": 174.0
  },
  "mode": "heuristic"
 }
