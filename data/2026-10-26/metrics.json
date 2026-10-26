@@ -1,0 +1,57 @@
+{
+ "video_id": "fEnwZUmWdgM",
+ "title": "BRAZIL GOES BUST - OCT 26- Stock Market LIVE, Live Trading, Stock News",
+ "runs": 1,
+ "watched_minutes": 20.2,
+ "audio_restarts": 6,
+ "audio_downtime_s": 21,
+ "chunks_transcribed": 0,
+ "chunks_dropped": 0,
+ "transcribe_lag_s": 0.0,
+ "whisper_model": "base.en",
+ "chat_messages": 131,
+ "chat_errors": 0,
+ "chat_peak_per_min": 10,
+ "top_chat_tickers": [
+  [
+   "CART",
+   4
+  ],
+  [
+   "DASH",
+   2
+  ],
+  [
+   "REA",
+   1
+  ],
+  [
+   "RKLB",
+   1
+  ],
+  [
+   "CAKE",
+   1
+  ],
+  [
+   "RPD",
+   1
+  ],
+  [
+   "UBS",
+   1
+  ],
+  [
+   "KDP",
+   1
+  ]
+ ],
+ "llm_calls": 0,
+ "llm_failures": 0,
+ "llm_usd": 0.0,
+ "alerts_sent": 0,
+ "segments_min": {
+  "other": 19.5
+ },
+ "mode": "heuristic"
+}
