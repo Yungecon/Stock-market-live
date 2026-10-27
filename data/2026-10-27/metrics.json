@@ -2,23 +2,35 @@
  "video_id": "KzJ4fH9sTU8",
  "title": "THE EARNINGS ARE GOING CRAZY - OCT 27- Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 100.3,
- "audio_restarts": 96,
- "audio_downtime_s": 374,
+ "watched_minutes": 120.3,
+ "audio_restarts": 115,
+ "audio_downtime_s": 459,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 709,
+ "chat_messages": 1126,
  "chat_errors": 0,
- "chat_peak_per_min": 22,
+ "chat_peak_per_min": 120,
  "top_chat_tickers": [
   [
    "BA",
    4
   ],
   [
+   "HOOD",
+   3
+  ],
+  [
    "PEP",
+   3
+  ],
+  [
+   "SPY",
+   3
+  ],
+  [
+   "LTM",
    3
   ],
   [
@@ -60,26 +72,14 @@
   [
    "TY",
    2
-  ],
-  [
-   "TMUS",
-   2
-  ],
-  [
-   "SPY",
-   2
-  ],
-  [
-   "HSY",
-   2
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 97.5
+  "other": 118.5
  },
  "mode": "heuristic"
 }
