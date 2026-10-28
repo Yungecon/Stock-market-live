@@ -2,20 +2,24 @@
  "video_id": "htvZglldcVY",
  "title": "FOMC LIVE @ 2:30PM EST - Kevin Warsh Sucks - OCT 28 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 80.3,
+ "watched_minutes": 100.3,
  "audio_restarts": 8,
  "audio_downtime_s": 25,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 398,
+ "chat_messages": 595,
  "chat_errors": 0,
- "chat_peak_per_min": 14,
+ "chat_peak_per_min": 64,
  "top_chat_tickers": [
   [
    "ORCL",
    13
+  ],
+  [
+   "MSFT",
+   4
   ],
   [
    "META",
@@ -58,28 +62,24 @@
    2
   ],
   [
+   "GL",
+   2
+  ],
+  [
    "AAPL",
    1
   ],
   [
    "NBIS",
    1
-  ],
-  [
-   "GSAT",
-   1
-  ],
-  [
-   "BTC",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 1,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 76.5
+  "other": 96.0
  },
  "mode": "heuristic"
 }
