@@ -2,16 +2,16 @@
  "video_id": "8iFNtdos4iY",
  "title": "Biotechs & Big Earnings - OCT 29 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
- "audio_restarts": 24,
- "audio_downtime_s": 78,
+ "watched_minutes": 40.2,
+ "audio_restarts": 42,
+ "audio_downtime_s": 146,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 147,
+ "chat_messages": 291,
  "chat_errors": 0,
- "chat_peak_per_min": 8,
+ "chat_peak_per_min": 27,
  "top_chat_tickers": [
   [
    "LOT",
@@ -40,6 +40,18 @@
   [
    "NVDA",
    1
+  ],
+  [
+   "WMT",
+   1
+  ],
+  [
+   "DEC",
+   1
+  ],
+  [
+   "CHAD",
+   1
   ]
  ],
  "llm_calls": 0,
@@ -47,7 +59,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 19.5
+  "other": 39.0
  },
  "mode": "heuristic"
 }
