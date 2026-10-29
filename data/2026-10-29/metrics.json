@@ -2,23 +2,51 @@
  "video_id": "8iFNtdos4iY",
  "title": "Biotechs & Big Earnings - OCT 29 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 80.3,
+ "watched_minutes": 100.3,
  "audio_restarts": 45,
  "audio_downtime_s": 170,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 658,
+ "chat_messages": 1183,
  "chat_errors": 0,
- "chat_peak_per_min": 34,
+ "chat_peak_per_min": 155,
  "top_chat_tickers": [
+  [
+   "INTC",
+   15
+  ],
+  [
+   "AMZN",
+   10
+  ],
   [
    "SPCX",
    4
   ],
   [
-   "AMZN",
+   "TWLO",
+   3
+  ],
+  [
+   "COIN",
+   3
+  ],
+  [
+   "PEP",
+   3
+  ],
+  [
+   "WMT",
+   2
+  ],
+  [
+   "CHAD",
+   2
+  ],
+  [
+   "SPY",
    2
   ],
   [
@@ -26,7 +54,7 @@
    2
   ],
   [
-   "INTC",
+   "AMD",
    2
   ],
   [
@@ -44,42 +72,14 @@
   [
    "UBER",
    1
-  ],
-  [
-   "SON",
-   1
-  ],
-  [
-   "CAR",
-   1
-  ],
-  [
-   "NVDA",
-   1
-  ],
-  [
-   "WMT",
-   1
-  ],
-  [
-   "DEC",
-   1
-  ],
-  [
-   "CHAD",
-   1
-  ],
-  [
-   "RKT",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 1,
+ "alerts_sent": 3,
  "segments_min": {
-  "other": 81.0
+  "other": 100.5
  },
  "mode": "heuristic"
 }
