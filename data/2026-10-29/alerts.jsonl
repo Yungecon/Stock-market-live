@@ -1,3 +1,4 @@
 {"time": "15:51:06", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — INTC", "body": "34 msgs/min vs ~6 normal.", "tickers": [], "evidence": ""}
 {"time": "16:01:07", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: gg", "tickers": [], "evidence": "[owner] @TheStockMarket: gg"}
 {"time": "16:01:08", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "146 msgs/min vs ~6 normal.", "tickers": [], "evidence": ""}
+{"time": "16:23:04", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "46 msgs/min vs ~14 normal.", "tickers": [], "evidence": ""}
