@@ -2,14 +2,14 @@
  "video_id": "FE6dxjUeY5Y",
  "title": "SPOOKY SELL OFF - OCT 30 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 140.3,
- "audio_restarts": 132,
- "audio_downtime_s": 565,
+ "watched_minutes": 160.3,
+ "audio_restarts": 150,
+ "audio_downtime_s": 639,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 1274,
+ "chat_messages": 1307,
  "chat_errors": 0,
  "chat_peak_per_min": 134,
  "top_chat_tickers": [
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 3,
  "segments_min": {
-  "other": 141.0
+  "other": 154.5
  },
  "mode": "heuristic"
 }
