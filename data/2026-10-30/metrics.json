@@ -2,20 +2,32 @@
  "video_id": "FE6dxjUeY5Y",
  "title": "SPOOKY SELL OFF - OCT 30 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
- "audio_restarts": 24,
- "audio_downtime_s": 90,
+ "watched_minutes": 40.2,
+ "audio_restarts": 42,
+ "audio_downtime_s": 170,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 202,
+ "chat_messages": 356,
  "chat_errors": 0,
- "chat_peak_per_min": 12,
+ "chat_peak_per_min": 32,
  "top_chat_tickers": [
   [
    "QQQ",
-   5
+   7
+  ],
+  [
+   "VIX",
+   4
+  ],
+  [
+   "INTC",
+   3
+  ],
+  [
+   "SPY",
+   3
   ],
   [
    "SQQQ",
@@ -23,6 +35,10 @@
   ],
   [
    "TQQQ",
+   2
+  ],
+  [
+   "NVDA",
    2
   ],
   [
@@ -34,11 +50,11 @@
    2
   ],
   [
-   "INTC",
+   "IMO",
    2
   ],
   [
-   "SPY",
+   "INIO",
    2
   ],
   [
@@ -54,32 +70,16 @@
    1
   ],
   [
-   "NVDA",
-   1
-  ],
-  [
    "RDDT",
-   1
-  ],
-  [
-   "VIX",
-   1
-  ],
-  [
-   "AMD",
-   1
-  ],
-  [
-   "DELL",
    1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 1,
  "segments_min": {
-  "other": 19.5
+  "other": 39.0
  },
  "mode": "heuristic"
 }
