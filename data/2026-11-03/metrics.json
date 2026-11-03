@@ -1,0 +1,49 @@
+{
+ "video_id": "mTGkKFdNQ4s",
+ "title": "MIDTERM MALARKEY - 11/3 - Stock Market LIVE, Live Trading, Stock News",
+ "runs": 1,
+ "watched_minutes": 20.2,
+ "audio_restarts": 24,
+ "audio_downtime_s": 79,
+ "chunks_transcribed": 0,
+ "chunks_dropped": 0,
+ "transcribe_lag_s": 0.0,
+ "whisper_model": "base.en",
+ "chat_messages": 138,
+ "chat_errors": 0,
+ "chat_peak_per_min": 8,
+ "top_chat_tickers": [
+  [
+   "INTC",
+   1
+  ],
+  [
+   "LTM",
+   1
+  ],
+  [
+   "HOUR",
+   1
+  ],
+  [
+   "META",
+   1
+  ],
+  [
+   "MSFT",
+   1
+  ],
+  [
+   "GOOG",
+   1
+  ]
+ ],
+ "llm_calls": 0,
+ "llm_failures": 0,
+ "llm_usd": 0.0,
+ "alerts_sent": 0,
+ "segments_min": {
+  "other": 19.5
+ },
+ "mode": "heuristic"
+}
