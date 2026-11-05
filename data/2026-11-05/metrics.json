@@ -2,23 +2,51 @@
  "video_id": "viqOruC9cVU",
  "title": "Midterm Hangover - 11/5 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
- "audio_restarts": 24,
- "audio_downtime_s": 75,
+ "watched_minutes": 40.2,
+ "audio_restarts": 42,
+ "audio_downtime_s": 136,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 218,
+ "chat_messages": 438,
  "chat_errors": 0,
- "chat_peak_per_min": 17,
+ "chat_peak_per_min": 35,
  "top_chat_tickers": [
+  [
+   "IREN",
+   6
+  ],
+  [
+   "TTWO",
+   5
+  ],
+  [
+   "AAOI",
+   4
+  ],
+  [
+   "NBIS",
+   3
+  ],
+  [
+   "MU",
+   3
+  ],
+  [
+   "NET",
+   3
+  ],
   [
    "SPY",
    2
   ],
   [
-   "NBIS",
+   "SNDK",
+   2
+  ],
+  [
+   "AMD",
    2
   ],
   [
@@ -26,11 +54,11 @@
    2
   ],
   [
-   "DBA",
-   1
+   "NVDA",
+   2
   ],
   [
-   "TTWO",
+   "DBA",
    1
   ],
   [
@@ -42,44 +70,16 @@
    1
   ],
   [
-   "MU",
-   1
-  ],
-  [
-   "SNDK",
-   1
-  ],
-  [
    "CRWV",
-   1
-  ],
-  [
-   "AMD",
-   1
-  ],
-  [
-   "INTC",
-   1
-  ],
-  [
-   "QNT",
-   1
-  ],
-  [
-   "APP",
-   1
-  ],
-  [
-   "ABNB",
    1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 1,
  "segments_min": {
-  "other": 19.5
+  "other": 40.5
  },
  "mode": "heuristic"
 }
