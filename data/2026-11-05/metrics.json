@@ -2,19 +2,23 @@
  "video_id": "viqOruC9cVU",
  "title": "Midterm Hangover - 11/5 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 40.2,
- "audio_restarts": 42,
- "audio_downtime_s": 136,
+ "watched_minutes": 60.2,
+ "audio_restarts": 61,
+ "audio_downtime_s": 207,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 438,
+ "chat_messages": 881,
  "chat_errors": 0,
- "chat_peak_per_min": 35,
+ "chat_peak_per_min": 123,
  "top_chat_tickers": [
   [
    "IREN",
+   8
+  ],
+  [
+   "ABNB",
    6
   ],
   [
@@ -22,7 +26,19 @@
    5
   ],
   [
+   "NET",
+   5
+  ],
+  [
    "AAOI",
+   4
+  ],
+  [
+   "CHAD",
+   4
+  ],
+  [
+   "TEAM",
    4
   ],
   [
@@ -34,7 +50,7 @@
    3
   ],
   [
-   "NET",
+   "QQQ",
    3
   ],
   [
@@ -56,30 +72,14 @@
   [
    "NVDA",
    2
-  ],
-  [
-   "DBA",
-   1
-  ],
-  [
-   "LITE",
-   1
-  ],
-  [
-   "SKHY",
-   1
-  ],
-  [
-   "CRWV",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 1,
+ "alerts_sent": 3,
  "segments_min": {
-  "other": 40.5
+  "other": 61.5
  },
  "mode": "heuristic"
 }
