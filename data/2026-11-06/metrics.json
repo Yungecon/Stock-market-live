@@ -2,20 +2,24 @@
  "video_id": "0GbXIyyKG6E",
  "title": "2018 or 2016? - 11/6 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 40.2,
- "audio_restarts": 42,
- "audio_downtime_s": 135,
+ "watched_minutes": 60.2,
+ "audio_restarts": 61,
+ "audio_downtime_s": 206,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 290,
+ "chat_messages": 407,
  "chat_errors": 0,
  "chat_peak_per_min": 13,
  "top_chat_tickers": [
   [
    "OKTA",
    6
+  ],
+  [
+   "CHAD",
+   2
   ],
   [
    "LIVE",
@@ -64,6 +68,10 @@
   [
    "CC",
    1
+  ],
+  [
+   "BAR",
+   1
   ]
  ],
  "llm_calls": 0,
@@ -71,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 39.0
+  "other": 60.0
  },
  "mode": "heuristic"
 }
