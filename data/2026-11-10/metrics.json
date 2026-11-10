@@ -2,23 +2,31 @@
  "video_id": "DjfIcbkJ6rA",
  "title": "Hold or fold - 11/10 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
+ "watched_minutes": 40.2,
  "audio_restarts": 9,
  "audio_downtime_s": 31,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 131,
+ "chat_messages": 177,
  "chat_errors": 0,
  "chat_peak_per_min": 12,
  "top_chat_tickers": [
   [
    "NVDA",
-   2
+   4
   ],
   [
    "VIX",
+   1
+  ],
+  [
+   "FLY",
+   1
+  ],
+  [
+   "AMD",
    1
   ]
  ],
@@ -27,7 +35,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 0,
  "segments_min": {
-  "other": 18.0
+  "other": 34.5
  },
  "mode": "heuristic"
 }
