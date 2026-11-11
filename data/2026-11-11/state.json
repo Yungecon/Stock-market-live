@@ -1,10 +1,13 @@
 {
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "self_dev_pinged": false,
  "segments": {
-  "other": 57.0
+  "other": 78.0
  },
- "recent_titles": [],
+ "recent_titles": [
+  "16:01:05 Streamer posted in chat",
+  "16:01:05 Chat spike"
+ ],
  "runs": 1,
  "llm_usd": 0.0,
  "live_seconds": 0,

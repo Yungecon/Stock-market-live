@@ -2,23 +2,31 @@
  "video_id": "unZjpLdue0I",
  "title": "CoreSAVE - 11/11 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 60.2,
+ "watched_minutes": 80.2,
  "audio_restarts": 11,
  "audio_downtime_s": 11,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 224,
+ "chat_messages": 576,
  "chat_errors": 0,
- "chat_peak_per_min": 8,
+ "chat_peak_per_min": 96,
  "top_chat_tickers": [
   [
    "CLX",
    7
   ],
   [
+   "NVDA",
+   3
+  ],
+  [
    "CAT",
+   2
+  ],
+  [
+   "CHAD",
    2
   ],
   [
@@ -27,10 +35,6 @@
   ],
   [
    "ZTS",
-   1
-  ],
-  [
-   "CHAD",
    1
   ],
   [
@@ -68,18 +72,14 @@
   [
    "BA",
    1
-  ],
-  [
-   "NVDA",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 57.0
+  "other": 78.0
  },
  "mode": "heuristic"
 }
