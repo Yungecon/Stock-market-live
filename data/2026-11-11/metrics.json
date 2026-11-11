@@ -2,15 +2,15 @@
  "video_id": "unZjpLdue0I",
  "title": "CoreSAVE - 11/11 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 80.2,
- "audio_restarts": 11,
- "audio_downtime_s": 11,
+ "watched_minutes": 100.3,
+ "audio_restarts": 24,
+ "audio_downtime_s": 39,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 576,
- "chat_errors": 0,
+ "chat_messages": 577,
+ "chat_errors": 19,
  "chat_peak_per_min": 96,
  "top_chat_tickers": [
   [
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 2,
  "segments_min": {
-  "other": 78.0
+  "other": 79.5
  },
  "mode": "heuristic"
 }
