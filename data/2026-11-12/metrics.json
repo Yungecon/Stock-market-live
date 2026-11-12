@@ -2,28 +2,32 @@
  "video_id": "sgSSmmIU13Y",
  "title": "MORE Jensen Accusations - NVDA VOLATILITY - 11/12 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 40.2,
- "audio_restarts": 42,
- "audio_downtime_s": 162,
+ "watched_minutes": 60.2,
+ "audio_restarts": 60,
+ "audio_downtime_s": 238,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 434,
- "chat_errors": 0,
- "chat_peak_per_min": 28,
+ "chat_messages": 714,
+ "chat_errors": 10,
+ "chat_peak_per_min": 108,
  "top_chat_tickers": [
   [
    "NVDA",
-   9
+   10
   ],
   [
    "ZM",
-   7
+   8
   ],
   [
    "TSLA",
-   4
+   5
+  ],
+  [
+   "CSCO",
+   5
   ],
   [
    "UK",
@@ -34,11 +38,11 @@
    2
   ],
   [
-   "CSCO",
+   "MP",
    2
   ],
   [
-   "MP",
+   "LTM",
    2
   ],
   [
@@ -68,18 +72,14 @@
   [
    "CHAD",
    1
-  ],
-  [
-   "TEAM",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 39.0
+  "other": 54.0
  },
  "mode": "heuristic"
 }
