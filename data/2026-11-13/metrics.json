@@ -2,24 +2,28 @@
  "video_id": "-9zc2ltgk44",
  "title": "The NVDA Polycule - 11/13 - Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 60.2,
- "audio_restarts": 61,
- "audio_downtime_s": 210,
+ "watched_minutes": 80.3,
+ "audio_restarts": 79,
+ "audio_downtime_s": 279,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 358,
+ "chat_messages": 695,
  "chat_errors": 0,
- "chat_peak_per_min": 19,
+ "chat_peak_per_min": 107,
  "top_chat_tickers": [
+  [
+   "NVDA",
+   6
+  ],
   [
    "META",
    6
   ],
   [
-   "NVDA",
-   5
+   "SPCX",
+   4
   ],
   [
    "DKNG",
@@ -30,15 +34,15 @@
    3
   ],
   [
+   "CHAD",
+   3
+  ],
+  [
    "WH",
    2
   ],
   [
    "APP",
-   2
-  ],
-  [
-   "SPCX",
    2
   ],
   [
@@ -68,18 +72,14 @@
   [
    "DAL",
    2
-  ],
-  [
-   "SAY",
-   1
   ]
  ],
  "llm_calls": 0,
  "llm_failures": 0,
  "llm_usd": 0.0,
- "alerts_sent": 0,
+ "alerts_sent": 2,
  "segments_min": {
-  "other": 60.0
+  "other": 79.5
  },
  "mode": "heuristic"
 }
