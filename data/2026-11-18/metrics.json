@@ -1,0 +1,85 @@
+{
+ "video_id": "j5XXprJDak0",
+ "title": "Wobbly Wednesday - 11/18- Stock Market LIVE, Live Trading, Stock News",
+ "runs": 1,
+ "watched_minutes": 20.2,
+ "audio_restarts": 24,
+ "audio_downtime_s": 86,
+ "chunks_transcribed": 0,
+ "chunks_dropped": 0,
+ "transcribe_lag_s": 0.0,
+ "whisper_model": "base.en",
+ "chat_messages": 429,
+ "chat_errors": 0,
+ "chat_peak_per_min": 89,
+ "top_chat_tickers": [
+  [
+   "NVDA",
+   3
+  ],
+  [
+   "PANW",
+   3
+  ],
+  [
+   "BABA",
+   2
+  ],
+  [
+   "CHAD",
+   2
+  ],
+  [
+   "HUM",
+   2
+  ],
+  [
+   "LTM",
+   2
+  ],
+  [
+   "LIVE",
+   2
+  ],
+  [
+   "AZ",
+   1
+  ],
+  [
+   "AMD",
+   1
+  ],
+  [
+   "AVGO",
+   1
+  ],
+  [
+   "CAKE",
+   1
+  ],
+  [
+   "SMCI",
+   1
+  ],
+  [
+   "GGG",
+   1
+  ],
+  [
+   "LUV",
+   1
+  ],
+  [
+   "DIS",
+   1
+  ]
+ ],
+ "llm_calls": 0,
+ "llm_failures": 0,
+ "llm_usd": 0.0,
+ "alerts_sent": 3,
+ "segments_min": {
+  "other": 21.0
+ },
+ "mode": "heuristic"
+}

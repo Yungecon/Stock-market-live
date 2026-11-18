@@ -1,0 +1,19 @@
+{
+ "alerts_sent": 3,
+ "self_dev_pinged": false,
+ "segments": {
+  "other": 21.0
+ },
+ "recent_titles": [
+  "16:00:49 Streamer posted in chat",
+  "16:01:04 Chat spike",
+  "16:11:04 Chat spike"
+ ],
+ "runs": 1,
+ "llm_usd": 0.0,
+ "live_seconds": 0,
+ "video_id": "j5XXprJDak0",
+ "title": "Wobbly Wednesday - 11/18- Stock Market LIVE, Live Trading, Stock News",
+ "llm_usd_prev": 0.0,
+ "walled_pinged": true
+}
