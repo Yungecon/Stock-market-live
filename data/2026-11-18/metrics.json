@@ -2,15 +2,15 @@
  "video_id": "j5XXprJDak0",
  "title": "Wobbly Wednesday - 11/18- Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 20.2,
- "audio_restarts": 24,
- "audio_downtime_s": 86,
+ "watched_minutes": 40.3,
+ "audio_restarts": 42,
+ "audio_downtime_s": 157,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 429,
- "chat_errors": 0,
+ "chat_messages": 431,
+ "chat_errors": 19,
  "chat_peak_per_min": 89,
  "top_chat_tickers": [
   [
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 3,
  "segments_min": {
-  "other": 21.0
+  "other": 22.5
  },
  "mode": "heuristic"
 }
