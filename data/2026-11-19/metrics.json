@@ -1,0 +1,61 @@
+{
+ "video_id": "Usw0Vlt0Dj4",
+ "title": "ANTHROPIC IPO - ANT STOCK - 11/19- Stock Market LIVE, Live Trading, Stock News",
+ "runs": 1,
+ "watched_minutes": 20.2,
+ "audio_restarts": 24,
+ "audio_downtime_s": 79,
+ "chunks_transcribed": 0,
+ "chunks_dropped": 0,
+ "transcribe_lag_s": 0.0,
+ "whisper_model": "base.en",
+ "chat_messages": 363,
+ "chat_errors": 0,
+ "chat_peak_per_min": 96,
+ "top_chat_tickers": [
+  [
+   "INTU",
+   4
+  ],
+  [
+   "BTC",
+   2
+  ],
+  [
+   "DEC",
+   1
+  ],
+  [
+   "EOD",
+   1
+  ],
+  [
+   "NVDA",
+   1
+  ],
+  [
+   "BSP",
+   1
+  ],
+  [
+   "SKM",
+   1
+  ],
+  [
+   "SKY",
+   1
+  ],
+  [
+   "LTM",
+   1
+  ]
+ ],
+ "llm_calls": 0,
+ "llm_failures": 0,
+ "llm_usd": 0.0,
+ "alerts_sent": 2,
+ "segments_min": {
+  "other": 18.0
+ },
+ "mode": "heuristic"
+}
