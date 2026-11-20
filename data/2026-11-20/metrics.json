@@ -2,14 +2,14 @@
  "video_id": "uNI7bZFmTYU",
  "title": "Volatility Vengeance  - 11/20- Stock Market LIVE, Live Trading, Stock News",
  "runs": 1,
- "watched_minutes": 120.2,
- "audio_restarts": 117,
- "audio_downtime_s": 342,
+ "watched_minutes": 140.3,
+ "audio_restarts": 135,
+ "audio_downtime_s": 412,
  "chunks_transcribed": 0,
  "chunks_dropped": 0,
  "transcribe_lag_s": 0.0,
  "whisper_model": "base.en",
- "chat_messages": 996,
+ "chat_messages": 1169,
  "chat_errors": 0,
  "chat_peak_per_min": 93,
  "top_chat_tickers": [
@@ -42,6 +42,10 @@
    2
   ],
   [
+   "CHAD",
+   2
+  ],
+  [
    "GOOGL",
    1
   ],
@@ -68,10 +72,6 @@
   [
    "WAT",
    1
-  ],
-  [
-   "NU",
-   1
   ]
  ],
  "llm_calls": 0,
@@ -79,7 +79,7 @@
  "llm_usd": 0.0,
  "alerts_sent": 2,
  "segments_min": {
-  "other": 115.5
+  "other": 135.0
  },
  "mode": "heuristic"
 }
