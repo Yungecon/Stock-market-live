@@ -1,2 +1,3 @@
 {"time": "16:01:01", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike", "body": "76 msgs/min vs ~7 normal.", "tickers": [], "evidence": ""}
 {"time": "16:02:31", "source": "heuristic", "category": "PLAY", "priority": 3, "title": "Streamer posted in chat", "body": "[owner] @TheStockMarket: ggg", "tickers": [], "evidence": "[owner] @TheStockMarket: ggg"}
+{"time": "18:01:00", "source": "heuristic", "category": "CHAT_SPIKE", "priority": 3, "title": "Chat spike — CHAD, PC, IMO", "body": "36 msgs/min vs ~6 normal.", "tickers": [], "evidence": ""}
