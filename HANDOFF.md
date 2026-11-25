@@ -66,3 +66,4 @@ wrap rewrites it. Edit it by hand any time — your edits win.
 - 2026-11-20: plain wrap (no LLM). 2 alerts, 0 trade pings.
 - 2026-11-23: plain wrap (no LLM). 0 alerts, 0 trade pings.
 - 2026-11-24: plain wrap (no LLM). 0 alerts, 0 trade pings.
+- 2026-11-25: plain wrap (no LLM). 0 alerts, 0 trade pings.
